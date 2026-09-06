@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- TfWM's documented GTFS-RT / arrivals host is HTTP-only. -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">api.tfwm.org.uk</domain>
+    </domain-config>
+</network-security-config>
