@@ -9,7 +9,7 @@ The app is a Flutter project at the repository root (package name `bus`). You do
 1. On your phone, open this GitHub repo in a browser: [asdasdasdasd123123123/Bus](https://github.com/asdasdasdasd123123123/Bus).
 2. Open the **Actions** tab.
 3. Sign in to GitHub if asked (artifacts are visible to people with repo access).
-4. Tap the latest **Android APK** workflow run (green tick). If none exist yet, tap **Run workflow** → **Run workflow** on the `main` branch (you need write access), wait a few minutes, then open that run.
+4. Tap the latest **Android APK** workflow run (green tick). Runs start on push to `main`, on pull requests, or when you tap **Run workflow** (pick this PR branch if `main` has not been updated yet). Wait a few minutes, then open that run.
 5. Scroll to **Artifacts** and download **birmingham-buses-apk**.
 6. Unzip the download if needed and tap `app-release.apk`.
 7. If Android blocks the install, allow installs from the browser / Files app, then try again.
