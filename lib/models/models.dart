@@ -1,10 +1,11 @@
 import 'package:latlong2/latlong.dart';
 
-enum DataSource { bods, bustimes, mock }
+enum DataSource { bods, tfwm, bustimes, mock }
 
 extension DataSourceLabel on DataSource {
   String get label => switch (this) {
         DataSource.bods => 'BODS live',
+        DataSource.tfwm => 'TfWM live',
         DataSource.bustimes => 'Live (bustimes.org)',
         DataSource.mock => 'Demo data',
       };
@@ -12,6 +13,8 @@ extension DataSourceLabel on DataSource {
   String get detail => switch (this) {
         DataSource.bods =>
           'Vehicle positions from the UK Bus Open Data Service SIRI-VM feed.',
+        DataSource.tfwm =>
+          'Stop arrivals from the Transport for West Midlands API.',
         DataSource.bustimes =>
           'Public live positions from bustimes.org (sourced from BODS). '
               'Add a BODS API key for the official feed.',

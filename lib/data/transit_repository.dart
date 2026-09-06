@@ -329,7 +329,7 @@ class TransitRepository {
     departures.sort((a, b) => a.when.compareTo(b.when));
     return DepartureSnapshot(
       departures: departures,
-      source: DataSource.bods,
+      source: DataSource.tfwm,
       stop: stop,
     );
   }
