@@ -6,13 +6,15 @@ The app is a Flutter project at the repository root (package name `bus`). You do
 
 ## Phone install (no developer tools)
 
-1. On your phone, open this GitHub repo in a browser: [asdasdasdasd123123123/Bus](https://github.com/asdasdasdasd123123123/Bus).
-2. Open the **Actions** tab.
-3. Sign in to GitHub if asked (artifacts are visible to people with repo access).
-4. Tap the latest **Android APK** workflow run (green tick). Runs start on push to `main`, on pull requests, or when you tap **Run workflow** (pick this PR branch if `main` has not been updated yet). Wait a few minutes, then open that run.
-5. Scroll to **Artifacts** and download **birmingham-buses-apk**.
-6. Unzip the download if needed and tap `app-release.apk`.
-7. If Android blocks the install, allow installs from the browser / Files app, then try again.
+**Direct APK (no GitHub login, no Actions):**
+
+https://github.com/asdasdasdasd123123123/Bus/releases/download/v0.1.0-preview/BirminghamBuses.apk
+
+On the phone: enable unknown sources → open `BirminghamBuses.apk` → Install.
+
+Release page: https://github.com/asdasdasdasd123123123/Bus/releases/tag/v0.1.0-preview
+
+CI also uploads the same APK as an Actions artifact on `main`, pull requests, and **Run workflow**, if you need a later rebuild.
 
 The APK is a **release** build signed with Flutter’s **debug keystore** (see `android/app/build.gradle.kts`). That is intentional so the file installs without a Play Store upload key. Updates from later CI runs install over the same app. Do **not** use this signing for Google Play.
 
