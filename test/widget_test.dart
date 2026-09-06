@@ -18,4 +18,16 @@ void main() {
     expect(find.text('Birmingham Buses'), findsOneWidget);
     expect(find.textContaining('Route 16'), findsWidgets);
   });
+
+  testWidgets('route picker lists West Midlands routes', (tester) async {
+    await tester.pumpWidget(const BirminghamBusesApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 50));
+
+    await tester.tap(find.text('Route 16'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('West Midlands routes'), findsOneWidget);
+    expect(find.textContaining('Great Barr'), findsWidgets);
+  });
 }

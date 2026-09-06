@@ -484,6 +484,7 @@ class _StopSelector extends ConsumerWidget {
       children: [
         Expanded(
           child: DropdownMenu<BusStop>(
+            key: ValueKey('${route.id}-${stop?.atco}'),
             initialSelection: stop,
             expandedInsets: EdgeInsets.zero,
             label: const Text('Stop'),
